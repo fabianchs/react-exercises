@@ -2,11 +2,24 @@ import React from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 
+const Alert = props => {
+	//here you have to return expected html using the properties being passed to the component
+	return (
+		<div class="alert-danger" role="alert">
+			OMG! Something really bad has happended!
+		</div>
+	);
+};
 /**
  * here you have declare your Alert component and return
  * the html that bootstrap dictates for its alert component
  */
+Alert.propTypes = {
+	//proptypes here
+	text: PropTypes.string
+};
 
+<Alert text="OMG! Something really bad has happened!"></Alert>;
 
 // here is where the alert component is being used, you don't have to edit this part,
 // but it helps you understan what properties is the component using
